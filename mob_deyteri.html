@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Include meta tag to ensure proper rendering and touch zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Include jQuery Mobile stylesheets -->
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <!-- Include the jQuery library -->
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <!-- Include the jQuery Mobile library -->
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <link rel="stylesheet" href="rules.css">
+</head>
+<body>
+
+<div class="header">
+			<h1>JCoffee stores</h1>
+		</div>
+		
+		<div class="container">
+			<div class="sidebar">
+				<a class="link" href="mob.index.html" data-ajax="false"> Αρχική </a>
+				<a class="link" href="mob.deyteri.html" data-ajax="false"> Επικοινωνία </a>
+			</div>
+			<div class="panel withImage" >
+				
+			<form action="./triti.html" data-ajax="false" method="GET">
+				<br/>
+			  <label for="fname">Ονοματεπώνυμο:</label>
+			  <input type="text" id="fname" name="fname" required>
+			   <p> Αγαπημένη σας ποικιλία καφέ <p/>
+				<input type="radio" id="html" name="fav_coffee" value="MasterBlend" required> 
+				<label for="html">MasterBlend</label>
+				<input type="radio" id="css" name="fav_coffee" value="SilkValley" required>
+				<label for="css">SilkValley</label>
+				<input type="radio" id="javascript" name="fav_coffee" value="RainforestTropical" required>
+				<label for="javascript">RainforestTropical</label>
+				<br/>
+				<label for="email">Email επικοινωνίας:</label>
+				<input type="email" id="email" name="email" required><br>
+			  <input type="submit" value="Πατήστε εδώ για υποβολή" >
+			  <input type="reset" value="Καθάρισμα">
+			</form>
+
+			</div>
+		</div>
+		<footer class="footer">
+	<p>Δημήτρης Μαγιόπουλος Copyright (c) 2023 ΠΑΜΑΚ</p>
+		</footer>	
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Τρίτη σελίδα!</title>
+  <!-- Include meta tag to ensure proper rendering and touch zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Include jQuery Mobile stylesheets -->
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <!-- Include the jQuery library -->
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <!-- Include the jQuery Mobile library -->
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <link rel="stylesheet" href="rules.css">
+</head>
+<body>
+	
+	<div class="text">
+  Στοιχεία Πελάτη και Αγαπημένης Ποικιλίας Καφέ
+	</div>
+	<div class="mydata" >
+		<p>Δεδομένα συμπληρωμένης φόρμας</p>
+		-------------------------------------
+		<p>Όνομα: <strong id="display_name"></strong><p>
+		<p>Αγαπημένη ποικιλία: <strong id="display_fav_coffee"></strong><p>
+		<p>Email: <strong id="display_email"></strong><p>
+	</div>
+		<script>
+			myURL = window.location.search; //Πέρνει το url ολόκληρο
+			urlParams = new URLSearchParams(myURL); //Βρίσκει τα attributes (fname, fav_coffee, email)
+
+			document.getElementById('display_name').innerHTML = urlParams.get('fname');
+			document.getElementById('display_fav_coffee').innerHTML = urlParams.get('fav_coffee');
+			document.getElementById('display_email').innerHTML = urlParams.get('email');
+			
+		</script>
+	</body>
+</html>

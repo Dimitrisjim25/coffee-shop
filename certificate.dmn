@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" id="definitions" name="DMN Certification Example" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="certification" name="Certification">
+    <decisionTable id="decisionTable" hitPolicy="UNIQUE" outputLabel="Certification">
+      <input id="birth_certificate" label="Birth Certificate">
+        <inputExpression id="inputExpression" typeRef="string">
+          <text>birth_certificate</text>
+        </inputExpression>
+      </input>
+      <output id="certification_output" label="Certification" name="Certification" typeRef="string"/>
+      <rule id="rule1">
+        <inputEntry>
+          <text>"yes"</text>
+        </inputEntry>
+        <outputEntry>
+          <text>"Certified"</text>
+        </outputEntry>
+      </rule>
+      <rule id="rule2">
+        <inputEntry>
+          <text>"no"</text>
+        </inputEntry>
+        <outputEntry>
+          <text>"Not Certified"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape id="dmnshape-decision_certification" dmnElementRef="certification">
+        <dc:Bounds x="330" y="120" width="180" height="80" />
+        <dmndi:DMNLabel />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-decisionTable-certification_output" dmnElementRef="decisionTable">
+        <di:waypoint x="420" y="200" />
+        <di:waypoint x="460" y="200" />
+        <dmndi:DMNLabel />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
